@@ -1,0 +1,233 @@
+[14:41:57] ubuntu@ubpc /home/ubuntu/trunk/dynamo_ct [SIGINT] 
+> docker compose -f deploy/docker-compose.yml up
+WARN[0000] /home/ubuntu/trunk/dynamo_ct/deploy/docker-compose.yml: `version` is obsolete 
+[+] Running 3/0
+ ✔ Container deploy-nats-server-1  Created                                                                                    0.0s 
+ ✔ Container deploy-etcd-server-1  Created                                                                                    0.0s 
+ ✔ Container deploy-dynamo-llm-1   Created                                                                                    0.0s 
+Attaching to dynamo-llm-1, etcd-server-1, nats-server-1
+etcd-server-1  | etcd 06:42:02.18 INFO  ==> 
+etcd-server-1  | etcd 06:42:02.19 INFO  ==> Welcome to the Bitnami etcd container
+nats-server-1  | [1] 2025/03/25 06:42:02.191222 [INF] Starting nats-server
+nats-server-1  | [1] 2025/03/25 06:42:02.191248 [INF]   Version:  2.11.0
+nats-server-1  | [1] 2025/03/25 06:42:02.191250 [INF]   Git:      [99e836e]
+nats-server-1  | [1] 2025/03/25 06:42:02.191252 [INF]   Name:     NAU7G6QGBQV7BR2FLFTIJKTCTTKGRSFHB7ILJKDI6ZEUHINCFPTNOP6L
+nats-server-1  | [1] 2025/03/25 06:42:02.191255 [INF]   Node:     kjEKQZjR
+nats-server-1  | [1] 2025/03/25 06:42:02.191257 [INF]   ID:       NAU7G6QGBQV7BR2FLFTIJKTCTTKGRSFHB7ILJKDI6ZEUHINCFPTNOP6L
+nats-server-1  | [1] 2025/03/25 06:42:02.191486 [INF] Starting JetStream
+nats-server-1  | [1] 2025/03/25 06:42:02.191499 [WRN] Temporary storage directory used, data could be lost on system reboot
+nats-server-1  | [1] 2025/03/25 06:42:02.191621 [INF]     _ ___ _____ ___ _____ ___ ___   _   __  __
+nats-server-1  | [1] 2025/03/25 06:42:02.191623 [INF]  _ | | __|_   _/ __|_   _| _ \ __| /_\ |  \/  |
+nats-server-1  | [1] 2025/03/25 06:42:02.191624 [INF] | || | _|  | | \__ \ | | |   / _| / _ \| |\/| |
+nats-server-1  | [1] 2025/03/25 06:42:02.191625 [INF]  \__/|___| |_| |___/ |_| |_|_\___/_/ \_\_|  |_|
+nats-server-1  | [1] 2025/03/25 06:42:02.191626 [INF] 
+nats-server-1  | [1] 2025/03/25 06:42:02.191627 [INF]          https://docs.nats.io/jetstream
+nats-server-1  | [1] 2025/03/25 06:42:02.191628 [INF] 
+nats-server-1  | [1] 2025/03/25 06:42:02.191629 [INF] ---------------- JETSTREAM ----------------
+nats-server-1  | [1] 2025/03/25 06:42:02.191630 [INF]   Max Memory:      23.31 GB
+nats-server-1  | [1] 2025/03/25 06:42:02.191632 [INF]   Max Storage:     86.43 GB
+nats-server-1  | [1] 2025/03/25 06:42:02.191633 [INF]   Store Directory: "/tmp/nats/jetstream"
+nats-server-1  | [1] 2025/03/25 06:42:02.191634 [INF]   API Level:       1
+nats-server-1  | [1] 2025/03/25 06:42:02.191635 [INF] -------------------------------------------
+etcd-server-1  | etcd 06:42:02.19 INFO  ==> Subscribe to project updates by watching https://github.com/bitnami/containers
+nats-server-1  | [1] 2025/03/25 06:42:02.192252 [INF] Listening for client connections on 0.0.0.0:4222
+nats-server-1  | [1] 2025/03/25 06:42:02.192428 [INF] Server is ready
+etcd-server-1  | etcd 06:42:02.19 INFO  ==> Did you know there are enterprise versions of the Bitnami catalog? For enhanced secure software supply chain features, unlimited pulls from Docker, LTS support, or application customization, see Bitnami Premium or Tanzu Application Catalog. See https://www.arrow.com/globalecs/na/vendors/bitnami/ for more information.
+etcd-server-1  | etcd 06:42:02.19 INFO  ==> 
+etcd-server-1  | etcd 06:42:02.19 INFO  ==> ** Starting etcd setup **
+etcd-server-1  | etcd 06:42:02.21 INFO  ==> Validating settings in ETCD_* env vars..
+etcd-server-1  | etcd 06:42:02.21 WARN  ==> You set the environment variable ALLOW_NONE_AUTHENTICATION=yes. For safety reasons, do not use this flag in a production environment.
+etcd-server-1  | etcd 06:42:02.21 INFO  ==> Initializing etcd
+etcd-server-1  | etcd 06:42:02.22 INFO  ==> Generating etcd config file using env variables
+etcd-server-1  | etcd 06:42:02.23 INFO  ==> Detected data from previous deployments
+etcd-server-1  | etcd 06:42:02.25 INFO  ==> ** etcd setup finished! **
+etcd-server-1  | 
+etcd-server-1  | etcd 06:42:02.27 INFO  ==> ** Starting etcd **
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291608Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_ADVERTISE_CLIENT_URLS","variable-value":"http://127.0.0.1:2379"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291697Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_AUTO_TLS","variable-value":"false"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291705Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_CLIENT_CERT_AUTH","variable-value":"false"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291711Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_DATA_DIR","variable-value":"/bitnami/etcd/data"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291733Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_LISTEN_CLIENT_URLS","variable-value":"http://0.0.0.0:2379"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291737Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_LOG_LEVEL","variable-value":"info"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291744Z","caller":"flags/flag.go:113","msg":"recognized and used environment variable","variable-name":"ETCD_PEER_AUTO_TLS","variable-value":"false"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291759Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_TRUSTED_CA_FILE="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291766Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_CONF_FILE=/opt/bitnami/etcd/conf/etcd.yaml"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291769Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_SNAPSHOT_HISTORY_LIMIT=1"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291772Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_EXTRA_AUTH_FLAGS="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291774Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_LISTEN_PEER_URLS="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291779Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_ON_K8S=no"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291782Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_SNAPSHOTS_DIR=/snapshots"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291786Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_BIN_DIR=/opt/bitnami/etcd/bin"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291788Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_VOLUME_DIR=/bitnami/etcd"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291791Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_INITIAL_CLUSTER_TOKEN="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291793Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_DEFAULT_CONF_DIR=/opt/bitnami/etcd/conf.default"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291796Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_NAME="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291798Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_CLUSTER_DOMAIN="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291800Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_DISASTER_RECOVERY=no"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291807Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_KEY_FILE="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291809Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_CONF_DIR=/opt/bitnami/etcd/conf"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291812Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_DAEMON_GROUP=etcd"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291814Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_START_FROM_SNAPSHOT=no"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291816Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_INIT_SNAPSHOT_FILENAME="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291819Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_INIT_SNAPSHOTS_DIR=/init-snapshot"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291821Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_TMP_DIR=/opt/bitnami/etcd/tmp"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291824Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_BASE_DIR=/opt/bitnami/etcd"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291827Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_INITIAL_CLUSTER="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291831Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_CERT_FILE="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291833Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_NEW_MEMBERS_ENV_FILE=/bitnami/etcd/data/new_member_envs"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291835Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_DAEMON_USER=etcd"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291854Z","caller":"flags/flag.go:93","msg":"unrecognized environment variable","environment-variable":"ETCD_INITIAL_ADVERTISE_PEER_URLS="}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291882Z","caller":"embed/config.go:689","msg":"Running http and grpc server on single port. This is not recommended for production."}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291907Z","caller":"etcdmain/etcd.go:73","msg":"Running: ","args":["etcd"]}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291961Z","caller":"etcdmain/etcd.go:116","msg":"server has been already initialized","data-dir":"/bitnami/etcd/data","dir-type":"member"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.291971Z","caller":"embed/config.go:689","msg":"Running http and grpc server on single port. This is not recommended for production."}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.291977Z","caller":"embed/etcd.go:140","msg":"configuring peer listeners","listen-peer-urls":["http://localhost:2380"]}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.292857Z","caller":"embed/etcd.go:148","msg":"configuring client listeners","listen-client-urls":["http://0.0.0.0:2379"]}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.293027Z","caller":"embed/etcd.go:323","msg":"starting an etcd server","etcd-version":"3.5.20","git-sha":"ac31c34","go-version":"go1.23.7","go-os":"linux","go-arch":"amd64","max-cpu-set":32,"max-cpu-available":32,"member-initialized":true,"name":"default","data-dir":"/bitnami/etcd/data","wal-dir":"","wal-dir-dedicated":"","member-dir":"/bitnami/etcd/data/member","force-new-cluster":false,"heartbeat-interval":"100ms","election-timeout":"1s","initial-election-tick-advance":true,"snapshot-count":100000,"max-wals":5,"max-snapshots":5,"snapshot-catchup-entries":5000,"initial-advertise-peer-urls":["http://localhost:2380"],"listen-peer-urls":["http://localhost:2380"],"advertise-client-urls":["http://127.0.0.1:2379"],"listen-client-urls":["http://0.0.0.0:2379"],"listen-metrics-urls":[],"cors":["*"],"host-whitelist":["*"],"initial-cluster":"","initial-cluster-state":"new","initial-cluster-token":"","quota-backend-bytes":2147483648,"max-request-bytes":1572864,"max-concurrent-streams":4294967295,"pre-vote":true,"initial-corrupt-check":false,"corrupt-check-time-interval":"0s","compact-check-time-enabled":false,"compact-check-time-interval":"1m0s","auto-compaction-mode":"periodic","auto-compaction-retention":"0s","auto-compaction-interval":"0s","discovery-url":"","discovery-proxy":"","downgrade-check-interval":"5s"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.293090Z","caller":"fileutil/fileutil.go:53","msg":"check file permission","error":"directory \"/bitnami/etcd/data\" exist, but the permission is \"drwxrwxr-x\". The recommended permission is \"-rwx------\" to prevent possible unprivileged access to the data"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.294444Z","caller":"etcdserver/backend.go:81","msg":"opened backend db","path":"/bitnami/etcd/data/member/snap/db","took":"1.092552ms"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.294653Z","caller":"etcdserver/server.go:534","msg":"No snapshot found. Recovering WAL from scratch!"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.294879Z","caller":"etcdserver/raft.go:541","msg":"restarting local member","cluster-id":"cdf818194e3a8c32","local-member-id":"8e9e05c52164694d","commit-index":44}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.294915Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d switched to configuration voters=()"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.294936Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became follower at term 5"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.294947Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"newRaft 8e9e05c52164694d [peers: [], term: 5, commit: 44, applied: 0, lastindex: 44, lastterm: 5]"}
+etcd-server-1  | {"level":"warn","ts":"2025-03-25T06:42:02.296191Z","caller":"auth/store.go:1241","msg":"simple token is not cryptographically signed"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.298350Z","caller":"mvcc/kvstore.go:425","msg":"kvstore restored","current-rev":13}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.298430Z","caller":"etcdserver/server.go:628","msg":"restore consistentIndex","index":44}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.299955Z","caller":"etcdserver/quota.go:94","msg":"enabled backend quota with default value","quota-name":"v3-applier","quota-size-bytes":2147483648,"quota-size":"2.1 GB"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.301520Z","caller":"etcdserver/server.go:875","msg":"starting etcd server","local-member-id":"8e9e05c52164694d","local-server-version":"3.5.20","cluster-version":"to_be_decided"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.301617Z","caller":"fileutil/purge.go:50","msg":"started to purge file","dir":"/bitnami/etcd/data/member/snap","suffix":"snap.db","max":5,"interval":"30s"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.301615Z","caller":"etcdserver/server.go:775","msg":"starting initial election tick advance","election-ticks":10}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.301730Z","caller":"fileutil/purge.go:50","msg":"started to purge file","dir":"/bitnami/etcd/data/member/snap","suffix":"snap","max":5,"interval":"30s"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.301749Z","caller":"fileutil/purge.go:50","msg":"started to purge file","dir":"/bitnami/etcd/data/member/wal","suffix":"wal","max":5,"interval":"30s"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.301928Z","caller":"v3rpc/health.go:61","msg":"grpc service status changed","service":"","status":"SERVING"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.302038Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d switched to configuration voters=(10276657743932975437)"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.302262Z","caller":"membership/cluster.go:421","msg":"added member","cluster-id":"cdf818194e3a8c32","local-member-id":"8e9e05c52164694d","added-peer-id":"8e9e05c52164694d","added-peer-peer-urls":["http://localhost:2380"],"added-peer-is-learner":false}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.302431Z","caller":"membership/cluster.go:587","msg":"set initial cluster version","cluster-id":"cdf818194e3a8c32","local-member-id":"8e9e05c52164694d","cluster-version":"3.5"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.302462Z","caller":"api/capability.go:75","msg":"enabled capabilities for version","cluster-version":"3.5"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.304817Z","caller":"embed/etcd.go:292","msg":"now serving peer/client/metrics","local-member-id":"8e9e05c52164694d","initial-advertise-peer-urls":["http://localhost:2380"],"listen-peer-urls":["http://localhost:2380"],"advertise-client-urls":["http://127.0.0.1:2379"],"listen-client-urls":["http://0.0.0.0:2379"],"listen-metrics-urls":[]}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.304752Z","caller":"embed/etcd.go:633","msg":"serving peer traffic","address":"127.0.0.1:2380"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:02.304889Z","caller":"embed/etcd.go:603","msg":"cmux::serve","address":"127.0.0.1:2380"}
+dynamo-llm-1   | 2025-03-25T06:42:02+0000 [WARNING] [cli] Converting 'Frontend' to lowercase: 'frontend'.
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696043Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d is starting a new election at term 5"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696067Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became pre-candidate at term 5"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696081Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d received MsgPreVoteResp from 8e9e05c52164694d at term 5"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696113Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became candidate at term 6"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696132Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d received MsgVoteResp from 8e9e05c52164694d at term 6"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696137Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"8e9e05c52164694d became leader at term 6"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.696140Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"raft.node: 8e9e05c52164694d elected leader 8e9e05c52164694d at term 6"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.697807Z","caller":"etcdserver/server.go:2144","msg":"published local member to cluster through raft","local-member-id":"8e9e05c52164694d","local-member-attributes":"{Name:default ClientURLs:[http://127.0.0.1:2379]}","request-path":"/0/members/8e9e05c52164694d/attributes","cluster-id":"cdf818194e3a8c32","publish-timeout":"7s"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.697863Z","caller":"embed/serve.go:124","msg":"ready to serve client requests"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.697882Z","caller":"etcdmain/main.go:44","msg":"notifying init daemon"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.697901Z","caller":"etcdmain/main.go:50","msg":"successfully notified init daemon"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.698097Z","caller":"v3rpc/health.go:61","msg":"grpc service status changed","service":"","status":"SERVING"}
+etcd-server-1  | {"level":"info","ts":"2025-03-25T06:42:03.698274Z","caller":"embed/serve.go:210","msg":"serving client traffic insecurely; this is strongly discouraged!","traffic":"grpc+http","address":"[::]:2379"}
+dynamo-llm-1   | INFO 03-25 06:42:04 __init__.py:190] Automatically detected platform cuda.
+dynamo-llm-1   | INFO 03-25 06:42:04 nixl.py:16] NIXL is available
+dynamo-llm-1   | 2025-03-25T06:42:04+0000 [WARNING] [cli] Converting 'Frontend' to lowercase: 'frontend'.
+dynamo-llm-1   | 2025-03-25T06:42:05+0000 [INFO] [cli] Starting graphs.agg:Frontend (Press CTRL+C to quit)
+dynamo-llm-1   | INFO 03-25 06:42:07 __init__.py:190] Automatically detected platform cuda.
+dynamo-llm-1   | INFO 03-25 06:42:07 __init__.py:190] Automatically detected platform cuda.
+dynamo-llm-1   | INFO 03-25 06:42:07 __init__.py:190] Automatically detected platform cuda.
+dynamo-llm-1   | INFO 03-25 06:42:07 nixl.py:16] NIXL is available
+dynamo-llm-1   | INFO 03-25 06:42:07 nixl.py:16] NIXL is available
+dynamo-llm-1   | INFO 03-25 06:42:07 nixl.py:16] NIXL is available
+nats-server-1  | [1] 2025/03/25 06:42:07.954770 [TRC] 192.168.0.4:56488 - cid:5 - <<- [CONNECT {"verbose":false,"pedantic":false,"jwt":null,"nkey":null,"sig":null,"name":null,"echo":true,"lang":"rust","version":"0.38.0","protocol":1,"tls_required":false,"user":"user","pass":"[REDACTED]","auth_token":null,"headers":true,"no_responders":true}]
+nats-server-1  | [1] 2025/03/25 06:42:07.954871 [TRC] 192.168.0.4:56488 - cid:5 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:07.954874 [TRC] 192.168.0.4:56488 - cid:5 - ->> [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:07.955891 [TRC] 192.168.0.4:56488 - cid:5 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:07.955896 [TRC] 192.168.0.4:56488 - cid:5 - ->> [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:07.955899 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.PING 1]
+nats-server-1  | [1] 2025/03/25 06:42:07.955912 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.PING.dynamo_processor_ab25a792 2]
+nats-server-1  | [1] 2025/03/25 06:42:07.955929 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.PING.dynamo_processor_ab25a792.OKmtImeMNcjuACzHGabAm4 3]
+nats-server-1  | [1] 2025/03/25 06:42:07.955932 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.INFO 4]
+nats-server-1  | [1] 2025/03/25 06:42:07.955934 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.INFO.dynamo_processor_ab25a792 5]
+nats-server-1  | [1] 2025/03/25 06:42:07.955937 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.INFO.dynamo_processor_ab25a792.OKmtImeMNcjuACzHGabAm4 6]
+nats-server-1  | [1] 2025/03/25 06:42:07.955939 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.STATS 7]
+nats-server-1  | [1] 2025/03/25 06:42:07.955941 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.STATS.dynamo_processor_ab25a792 8]
+nats-server-1  | [1] 2025/03/25 06:42:07.955944 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB $SRV.STATS.dynamo_processor_ab25a792.OKmtImeMNcjuACzHGabAm4 9]
+nats-server-1  | [1] 2025/03/25 06:42:07.964293 [TRC] 192.168.0.4:56490 - cid:6 - <<- [CONNECT {"verbose":false,"pedantic":false,"jwt":null,"nkey":null,"sig":null,"name":null,"echo":true,"lang":"rust","version":"0.38.0","protocol":1,"tls_required":false,"user":"user","pass":"[REDACTED]","auth_token":null,"headers":true,"no_responders":true}]
+nats-server-1  | [1] 2025/03/25 06:42:07.964320 [TRC] 192.168.0.4:56490 - cid:6 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:07.964322 [TRC] 192.168.0.4:56490 - cid:6 - ->> [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:07.965064 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.PING 1]
+nats-server-1  | [1] 2025/03/25 06:42:07.965071 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.PING.dynamo_vllmworker_f3e86392 2]
+nats-server-1  | [1] 2025/03/25 06:42:07.965073 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.PING.dynamo_vllmworker_f3e86392.5qOpSGgw9JcabWgHbJYVvF 3]
+nats-server-1  | [1] 2025/03/25 06:42:07.965075 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.INFO 4]
+nats-server-1  | [1] 2025/03/25 06:42:07.965076 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.INFO.dynamo_vllmworker_f3e86392 5]
+nats-server-1  | [1] 2025/03/25 06:42:07.965077 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.INFO.dynamo_vllmworker_f3e86392.5qOpSGgw9JcabWgHbJYVvF 6]
+nats-server-1  | [1] 2025/03/25 06:42:07.965079 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.STATS 7]
+nats-server-1  | [1] 2025/03/25 06:42:07.965080 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.STATS.dynamo_vllmworker_f3e86392 8]
+nats-server-1  | [1] 2025/03/25 06:42:07.965081 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB $SRV.STATS.dynamo_vllmworker_f3e86392.5qOpSGgw9JcabWgHbJYVvF 9]
+dynamo-llm-1   | Using default Dynamo address: dynamo/VllmWorker
+nats-server-1  | [1] 2025/03/25 06:42:08.311189 [TRC] 192.168.0.4:56504 - cid:7 - <<- [CONNECT {"verbose":false,"pedantic":false,"jwt":null,"nkey":null,"sig":null,"name":null,"echo":true,"lang":"rust","version":"0.38.0","protocol":1,"tls_required":false,"user":"user","pass":"[REDACTED]","auth_token":null,"headers":true,"no_responders":true}]
+nats-server-1  | [1] 2025/03/25 06:42:08.311233 [TRC] 192.168.0.4:56504 - cid:7 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:08.311236 [TRC] 192.168.0.4:56504 - cid:7 - ->> [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:08.313009 [TRC] 192.168.0.4:56504 - cid:7 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:08.313013 [TRC] 192.168.0.4:56504 - cid:7 - ->> [PONG]
+dynamo-llm-1   | chat model deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B removed from the public namespace: public
+nats-server-1  | [1] 2025/03/25 06:42:08.679997 [TRC] 192.168.0.4:56514 - cid:8 - <<- [CONNECT {"verbose":false,"pedantic":false,"jwt":null,"nkey":null,"sig":null,"name":null,"echo":true,"lang":"rust","version":"0.38.0","protocol":1,"tls_required":false,"user":"user","pass":"[REDACTED]","auth_token":null,"headers":true,"no_responders":true}]
+nats-server-1  | [1] 2025/03/25 06:42:08.680050 [TRC] 192.168.0.4:56514 - cid:8 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:08.680051 [TRC] 192.168.0.4:56514 - cid:8 - ->> [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:08.680726 [TRC] 192.168.0.4:56514 - cid:8 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:08.680730 [TRC] 192.168.0.4:56514 - cid:8 - ->> [PONG]
+dynamo-llm-1   | Added new chat model deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+dynamo-llm-1   | +------------+-------------------------------------------+-----------+-----------+------------------+
+dynamo-llm-1   | | MODEL TYPE | MODEL NAME                                | NAMESPACE | COMPONENT | ENDPOINT         |
+dynamo-llm-1   | +------------+-------------------------------------------+-----------+-----------+------------------+
+dynamo-llm-1   | | chat       | deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B | dynamo    | Processor | chat/completions |
+dynamo-llm-1   | +------------+-------------------------------------------+-----------+-----------+------------------+
+nats-server-1  | [1] 2025/03/25 06:42:08.729232 [TRC] 192.168.0.4:56526 - cid:9 - <<- [CONNECT {"verbose":false,"pedantic":false,"jwt":null,"nkey":null,"sig":null,"name":null,"echo":true,"lang":"rust","version":"0.38.0","protocol":1,"tls_required":false,"user":"user","pass":"[REDACTED]","auth_token":null,"headers":true,"no_responders":true}]
+nats-server-1  | [1] 2025/03/25 06:42:08.729263 [TRC] 192.168.0.4:56526 - cid:9 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:08.729264 [TRC] 192.168.0.4:56526 - cid:9 - ->> [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:08.729880 [TRC] 192.168.0.4:56526 - cid:9 - <<- [PING]
+nats-server-1  | [1] 2025/03/25 06:42:08.729884 [TRC] 192.168.0.4:56526 - cid:9 - ->> [PONG]
+dynamo-llm-1   | 2025-03-25T06:42:08.730083Z  INFO dynamo_runtime::pipeline::network::tcp::server: tcp transport service on 192.168.0.4:36597
+dynamo-llm-1   | 2025-03-25T06:42:08.730258Z  INFO dynamo_llm::http::service::service_v2: Starting HTTP service on: 0.0.0.0:8000 address="0.0.0.0:8000"
+dynamo-llm-1   | 2025-03-25T06:42:08.730712Z  INFO dynamo_llm::http::service::discovery: added Chat model: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+dynamo-llm-1   | 2025-03-25T06:42:08.731097Z  INFO dynamo_llm::http::service::discovery: added Chat model: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+dynamo-llm-1   | INFO 03-25 06:42:09 __init__.py:190] Automatically detected platform cuda.
+dynamo-llm-1   | INFO 03-25 06:42:09 nixl.py:16] NIXL is available
+nats-server-1  | [1] 2025/03/25 06:42:09.979377 [TRC] 192.168.0.4:56490 - cid:6 - ->> [PING]
+nats-server-1  | [1] 2025/03/25 06:42:09.979625 [TRC] 192.168.0.4:56490 - cid:6 - <<- [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:10.224016 [TRC] 192.168.0.4:56488 - cid:5 - ->> [PING]
+nats-server-1  | [1] 2025/03/25 06:42:10.224172 [TRC] 192.168.0.4:56488 - cid:5 - <<- [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:11.059793 [TRC] 192.168.0.4:56526 - cid:9 - ->> [PING]
+nats-server-1  | [1] 2025/03/25 06:42:11.060062 [TRC] 192.168.0.4:56526 - cid:9 - <<- [PONG]
+nats-server-1  | [1] 2025/03/25 06:42:13.658981 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB dynamo_processor_ab25a792.chat/completions-694d95cc0963b704 q 10]
+dynamo-llm-1   | INFO 03-25 06:42:14 config.py:542] This model supports multiple tasks: {'classify', 'reward', 'generate', 'embed', 'score'}. Defaulting to 'generate'.
+dynamo-llm-1   | WARNING 03-25 06:42:14 cuda.py:95] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+dynamo-llm-1   | WARNING 03-25 06:42:14 config.py:678] Async output processing is not supported on the current platform type cuda.
+dynamo-llm-1   | INFO 03-25 06:42:14 llm_engine.py:246] Initializing a V0 LLM engine (v0.7.2) with config: model='deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', speculative_config=None, tokenizer='deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=16384, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=False, use_async_output_proc=False, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":[],"compile_sizes":[],"cudagraph_capture_sizes":[],"max_capture_size":0}, use_cached_outputs=True, 
+dynamo-llm-1   | INFO 03-25 06:42:16 cuda.py:230] Using Flash Attention backend.
+dynamo-llm-1   | INFO 03-25 06:42:16 model_runner.py:1110] Starting to load model deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B...
+dynamo-llm-1   | INFO 03-25 06:42:17 weight_utils.py:252] Using model weights format ['*.safetensors']
+dynamo-llm-1   | INFO 03-25 06:42:17 weight_utils.py:297] No model.safetensors.index.json found in remote.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.78it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.77it/s]
+dynamo-llm-1   | 
+dynamo-llm-1   | INFO 03-25 06:42:18 model_runner.py:1115] Loading model weights took 3.3460 GB
+dynamo-llm-1   | INFO 03-25 06:42:19 worker.py:269] Memory profiling takes 1.34 seconds
+dynamo-llm-1   | INFO 03-25 06:42:19 worker.py:269] the current vLLM instance can use total_gpu_memory (15.61GiB) x gpu_memory_utilization (0.90) = 14.05GiB
+dynamo-llm-1   | INFO 03-25 06:42:19 worker.py:269] model weights take 3.35GiB; non_torch_memory takes 0.03GiB; PyTorch activation peak memory takes 1.43GiB; the rest of the memory reserved for KV Cache is 9.24GiB.
+dynamo-llm-1   | INFO 03-25 06:42:19 executor_base.py:110] # CUDA blocks: 5405, # CPU blocks: 2340
+dynamo-llm-1   | INFO 03-25 06:42:19 executor_base.py:115] Maximum concurrency for 16384 tokens per request: 21.11x
+dynamo-llm-1   | INFO 03-25 06:42:21 llm_engine.py:477] init engine (profile, create kv cache, warmup model) took 3.03 seconds
+nats-server-1  | [1] 2025/03/25 06:42:21.541578 [TRC] 192.168.0.4:56490 - cid:6 - <<- [SUB dynamo_vllmworker_f3e86392.generate-694d95cc0963b706 q 10]
+nats-server-1  | [1] 2025/03/25 06:42:28.204909 [TRC] 192.168.0.4:56526 - cid:9 - <<- [SUB _INBOX.6BItCmqfEwoqAGunIdm46a.* 0]
+nats-server-1  | [1] 2025/03/25 06:42:28.204928 [TRC] 192.168.0.4:56526 - cid:9 - <<- [PUB dynamo_processor_ab25a792.chat/completions-694d95cc0963b704 _INBOX.6BItCmqfEwoqAGunIdm46a.6BItCmqfEwoqAGunIdm45Q 493]
+nats-server-1  | [1] 2025/03/25 06:42:28.204935 [TRC] 192.168.0.4:56526 - cid:9 - <<- MSG_PAYLOAD: ["\x00\x00\x00\x00\x00\x00\x01D\x00\x00\x00\x00\x00\x00\x00\x91q\x86\x98\x96\x04\xe6\xc0\xbe{\"id\":\"052273c7-7db7-43d7-a616-c1abe2a38dfb\",\"request_type\":\"single_in\",\"response_type\":\"many_out\",\"connection_info\":{\"transport\":\"tcp_server\",\"info\":\"{\\\"address\\\":\\\"192.168.0.4:36597\\\",\\\"subject\\\":\\\"b3c3d4e6-0d14-43de-9c9a-6cc177a45cdc\\\",\\\"context\\\":\\\"052273c7-7db7-43d7-a616-c1abe2a38dfb\\\",\\\"stream_type\\\":\\\"response\\\"}\"}}{\"messages\":[{\"role\":\"user\",\"content\":\"Hello, how are you?\"}],\"model\":\"deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B\",\"max_tokens\":300,\"stream\":true}"]
+nats-server-1  | [1] 2025/03/25 06:42:28.204968 [TRC] 192.168.0.4:56488 - cid:5 - ->> [MSG dynamo_processor_ab25a792.chat/completions-694d95cc0963b704 10 _INBOX.6BItCmqfEwoqAGunIdm46a.6BItCmqfEwoqAGunIdm45Q 493]
+nats-server-1  | [1] 2025/03/25 06:42:28.205272 [TRC] 192.168.0.4:56488 - cid:5 - <<- [PUB _INBOX.6BItCmqfEwoqAGunIdm46a.6BItCmqfEwoqAGunIdm45Q 0]
+nats-server-1  | [1] 2025/03/25 06:42:28.205276 [TRC] 192.168.0.4:56488 - cid:5 - <<- MSG_PAYLOAD: [""]
+nats-server-1  | [1] 2025/03/25 06:42:28.205283 [TRC] 192.168.0.4:56526 - cid:9 - ->> [MSG _INBOX.6BItCmqfEwoqAGunIdm46a.6BItCmqfEwoqAGunIdm45Q 0 0]
+nats-server-1  | [1] 2025/03/25 06:42:28.226732 [TRC] 192.168.0.4:56488 - cid:5 - <<- [SUB _INBOX.OKmtImeMNcjuACzHGabAra.* 0]
+nats-server-1  | [1] 2025/03/25 06:42:28.226740 [TRC] 192.168.0.4:56488 - cid:5 - <<- [PUB dynamo_vllmworker_f3e86392.generate-694d95cc0963b706 _INBOX.OKmtImeMNcjuACzHGabAra.OKmtImeMNcjuACzHGabAop 814]
+nats-server-1  | [1] 2025/03/25 06:42:28.226750 [TRC] 192.168.0.4:56488 - cid:5 - <<- MSG_PAYLOAD: ["\x00\x00\x00\x00\x00\x00\x01D\x00\x00\x00\x00\x00\x00\x01\xd2\x7f\xfd\xbbfG\x85'\xee{\"id\":\"672d8c27-5c1c-4a5f-8a68-624fbeeb331f\",\"request_type\":\"single_in\",\"response_type\":\"many_out\",\"connection_info\":{\"transport\":\"tcp_server\",\"info\":\"{\\\"address\\\":\\\"192.168.0.4:34245\\\",\\\"subject\\\":\\\"1d6fdfc9-3cda-4b7d-9b03-70b6a78cce04\\\",\\\"context\\\":\\\"672d8c27-5c1c-4a5f-8a68-624fbeeb331f\\\",\\\"stream_type\\\":\\\"response\\\"}\"}}\"{\\\"engine_prompt\\\":{\\\"prompt_token_ids\\\":[151646,151644,9707,11,1246,525,498,30,151645,151648,198]},\\\"sampling_params\\\":\\\"{\\\\\\\"presence_penalty\\\\\\\":0.0,\\\\\\\"frequency_penalty\\\\\\\":0.0,\\\\\\\"repetition_penalty\\\\\\\":1.0,\\\\\\\"temperature\\\\\\\":1.0,\\\\\\\"top_p\\\\\\\":1.0,\\\\\\\"min_p\\\\\\\":0.0,\\\\\\\"stop\\\\\\\":[],\\\\\\\"stop_token_ids\\\\\\\":[],\\\\\\\"bad_words\\\\\\\":[],\\\\\\\"max_tokens\\\\\\\":300,\\\\\\\"output_kind\\\\\\\":1}\\\",\\\"request_id\\\":\\\"c0e67518-b4cd-4ba5-8c00-6ed6ff810a61\\\",\\\"prefix_hit_rate\\\":0.0}\""]
+nats-server-1  | [1] 2025/03/25 06:42:28.226774 [TRC] 192.168.0.4:56490 - cid:6 - ->> [MSG dynamo_vllmworker_f3e86392.generate-694d95cc0963b706 10 _INBOX.OKmtImeMNcjuACzHGabAra.OKmtImeMNcjuACzHGabAop 814]
+nats-server-1  | [1] 2025/03/25 06:42:28.227008 [TRC] 192.168.0.4:56490 - cid:6 - <<- [PUB _INBOX.OKmtImeMNcjuACzHGabAra.OKmtImeMNcjuACzHGabAop 0]
+nats-server-1  | [1] 2025/03/25 06:42:28.227013 [TRC] 192.168.0.4:56490 - cid:6 - <<- MSG_PAYLOAD: [""]
+nats-server-1  | [1] 2025/03/25 06:42:28.227018 [TRC] 192.168.0.4:56488 - cid:5 - ->> [MSG _INBOX.OKmtImeMNcjuACzHGabAra.OKmtImeMNcjuACzHGabAop 0 0]
+dynamo-llm-1   | INFO 03-25 06:42:28 engine.py:404] Added request c0e67518-b4cd-4ba5-8c00-6ed6ff810a61.
+dynamo-llm-1   | INFO 03-25 06:42:28 metrics.py:455] Avg prompt throughput: 1.6 tokens/s, Avg generation throughput: 0.1 tokens/s, Running: 1 reqs, Swapped: 0 reqs, Pending: 0 reqs, GPU KV cache usage: 0.0%, CPU KV cache usage: 0.0%.
+dynamo-llm-1   | INFO 03-25 06:42:28 metrics.py:471] Prefix cache hit rate: GPU: 0.00%, CPU: 0.00%

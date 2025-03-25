@@ -72,6 +72,70 @@ Hello! I'm just a program, so I don't have feelings, but thanks for asking! How 
 ? User ›
 ```
 
+## LLM Serving
+
+### Start Dynamo Distributed Runtime Services
+
+```bash
+docker compose -f deploy/docker-compose.yml up -d
+```
+
+### Stop the Containers
+
+```bash
+docker compose -f deploy/docker-compose.yml down -v
+```
+
+### Send a Request to the Container
+
+```bash
+curl -s http://localhost:8000/v1/chat/completions \
+    -H "Content-Type: application/json" \
+    -d '{
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "messages": [
+        {
+        "role": "user",
+        "content": "Hello, how are you?"
+        }
+    ],
+    "stream": false,
+    "max_tokens": 300
+    }' | jq
+```
+
+example output:
+
+```bash
+
+{
+  "id": "552b2ecc-2ede-4389-9a09-6c74da1604fe",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "content": "Alright, the user greeted me with a casual \"Hello, how are you?\" I should respond politely.\n\nI need to let them know I'm just a program and—I don't have feelings or emotions.\n\nI'll keep it friendly too.\n</think>\n\nHello! I'm here as a program, and I don't have personal emotions or experiences. How can I assist you today?",
+        "refusal": null,
+        "tool_calls": null,
+        "role": "assistant",
+        "function_call": null,
+        "audio": null
+      },
+      "finish_reason": "stop",
+      "logprobs": null
+    }
+  ],
+  "created": 1742884434,
+  "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "object": "chat.completion",
+  "usage": null
+}
+[14:33:55] ubuntu@ubpc /home/ubuntu  
+> 
+```
+
 ## Container Details
 
 - Base Image: `nvidia/cuda:12.5.1-base-ubuntu24.04`
